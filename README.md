@@ -1,20 +1,3 @@
----
-title: '小型搜索引擎Novel Sou Sou'
-date: 2020-11-24 23:06:11
-updated: 2020-11-24 23:06:16
-tags: 
-  - 信息检索
-  - 搜索引擎
-  - Scrapy
-  - Whoosh
-  - Django
-  - BootStrap4
-categories: Interesting Projects
-description: “Novel Sou Sou”搜索引擎，基于Scrapy爬虫，Whoosh索引建立，Django的小型搜索引擎，一键搜索全网小说并提供下载功能
-top_img: https://i.loli.net/2020/11/24/QtHpBnCxdoPTXJI.png
-cover: https://i.loli.net/2020/11/24/QtHpBnCxdoPTXJI.png
-katax: true
----
 # Novel Sou Sou 小说搜索引擎
 爬取多家**笔趣阁**网站（笑），使用MongoDB存储小说信息，建立倒排索引以便进行搜索，最后基于Django建立Web服务。实现**搜索全网小说**并可**一键下载**。
 
