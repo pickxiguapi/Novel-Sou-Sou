@@ -45,7 +45,7 @@
   ![屏幕截图 2020-11-24 232439.png](https://i.loli.net/2020/11/24/QtHpBnCxdoPTXJI.png)
 - 结果界面展示
   ![屏幕截图 2020-11-25 001958.png](https://i.loli.net/2020/11/25/w82RNieG31BqkTX.png)
-  ![屏幕截图 2020-11-25 002040.png](https://i.loli.net/2020/11/25/FKkOAiVXYSWqDPR.png)
+
 
 ## 设计思路
 - ### **1、爬虫相关**
@@ -158,6 +158,8 @@
 ## 源代码
 
 [Github： Novel-Sou-Sou](https://github.com/pickxiguapi/Novel-Sou-Sou)
+
+[笔记：小型小说搜索引擎搭建](https://yuanyf.ml/2020/11/24/%E5%B0%8F%E5%9E%8B%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/)
 
 
 
