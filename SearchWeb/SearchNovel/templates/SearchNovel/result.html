@@ -1,0 +1,39 @@
+{% extends "SearchNovel/search.html" %}
+
+
+{% block search %}找到相关结果 {{results_num}} 条{% endblock %}
+
+
+{% block content %}
+    {% for key in results %}
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="col-md-3 column">
+                            <a href="{{key.novelUrl}}" class="package-name" style="font-size: 14px">{{key.novelName}}</a>
+                        </div>
+                        <div class="col-md-2 column">
+                            <h1 style="font-size: 14px">作者：{{key.novelAuthor}}</h1>
+                        </div>
+                        <div class="col-md-5 column">
+                            <a href="{{key.novelUpdateUrl}}" style="font-size: 14px">最新章节：{{key.novelUpdateName}}</a>
+                        </div>
+                        <div class="col-md-2 column">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-primary" name="{{key.novelUrl}}">下载</button>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-12 column">
+                            <h class="package-description" style="font-size: 14px">{{key.novelIntroduction}}</h>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block download %}<h1 style="font-size: 20px">{{results_download}}</h1> {% endblock %}

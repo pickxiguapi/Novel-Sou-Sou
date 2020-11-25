@@ -1,0 +1,70 @@
+body {
+  height: 100%;
+  background-image: url('../image/bg2.jpg');
+}
+@font-face
+{
+    font-family: myFirstFont;
+    src: url('../font/WAS.otf');
+    font-weight:bold;
+}
+
+button
+{
+  margin-right: 15px;
+  margin-left: 5px;
+}
+#para1
+{
+    text-align: center;
+    color: #9AC196;
+    font-family: myFirstFont;
+}
+
+.form-title {
+  font-size: 70px;
+}
+
+footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:30px;   /* 底部高度 */
+   font-family: myFirstFont;
+}
+
+.form-login {
+  width: 100%;
+  max-width: 800px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-login{
+  margin-top:80px;
+  font-weight: 400;
+}
+.form-login .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 12px;
+
+}
+.form-login .form-control:focus {
+  z-index: 2;
+}
+.form-login input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+h1{
+    margin-top:20px;
+}
+form a{
+  display: inline-block;
+  margin-top:25px;
+  font-size: 12px;
+  line-height: 10px;
+}

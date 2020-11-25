@@ -1,0 +1,68 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'SearchNovel/css/search.css' %}" rel="stylesheet"/>
+    <title>NovelSouSou</title>
+  </head>
+  <body>
+    <div class="container">
+            <div class="col">
+              <form class="form-login" action="/search/" method="POST">
+                  {% csrf_token %}
+                  <div class="form-title">
+                    <label for="id_username" id="para1">Novel Sou Sou</label>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name='searchname' class="form-control" id="id_username" placeholder="请输入搜索内容" autofocus="" value="{% block search %}{% endblock %}" required>
+                  </div>
+
+                  <div class="button-group">
+                      <button type="submit" class="btn btn-primary float-right" name="shuming">按书名搜索</button>
+                      <button type="submit" class="btn btn-primary float-right" name="zuozhe">按作者搜索</button>
+                      <button type="submit" class="btn btn-primary float-right" name="zonghe">综合搜索</button>
+                  </div>
+              </form>
+            </div>
+    </div> <!-- /container -->
+    <search>
+        <div class="container" style="background:rgba(127, 141, 134, 0.2)">
+            <div class="col">
+                  <form class="form-login" action="/search/" method="post">
+                      {% block content %}
+
+                      {% endblock %}
+                  </form>
+            </div>
+        </div> <!-- /container -->
+
+
+    </search>
+    <div class="container">
+            <div class="col">
+                  <form class="form-login" action="/search/" method="post">
+                      {% block download %}
+
+                      {% endblock %}
+                  </form>
+            </div>
+        </div> <!-- /container -->
+    <footer id="footer" style="text-align: center">
+        <p>@Author :  Yuan Yifu</p>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {#    以下三者的引用顺序是固定的#}
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
